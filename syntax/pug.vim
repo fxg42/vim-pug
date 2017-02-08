@@ -20,11 +20,12 @@ silent! syntax include @htmlCss syntax/css.vim
 unlet! b:current_syntax
 silent! syntax include @htmlMarkdown syntax/markdown.vim
 unlet! b:current_syntax
+silent! syntax include @htmlJavascript syntax/javascript.vim
+unlet! b:current_syntax
 
 syn case match
 
 syn region  javascriptParenthesisBlock start="(" end=")" contains=@htmlJavascript contained keepend
-syn cluster htmlJavascript add=javascriptParenthesisBlock
 
 syn region  pugJavascript matchgroup=pugJavascriptOutputChar start="[!&]\==\|\~" skip=",\s*$" end="$" contained contains=@htmlJavascript keepend
 syn region  pugJavascript matchgroup=pugJavascriptChar start="-" skip=",\s*$" end="$" contained contains=@htmlJavascript keepend
